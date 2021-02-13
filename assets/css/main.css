@@ -76,16 +76,15 @@ p {
    .hero .hero-text {
       background-color: rgba(1, 158, 158, 0.900);
       color: #fff;
-      border-radius: 6px;
-      padding: 20px;
+      border-top-right-radius: 15px;
+      border-bottom-left-radius: 15px;
+      padding: 20px 30px 50px 30px;
       width: 60%;
    }
    .hero a {
       color: #fff;
       background-color: #ff495c;
       padding: 12px;
-      margin: 20px auto;
-      border: 0;
       border-radius: 6px;
       font-size: 18px;
       font-weight: 700;
@@ -130,7 +129,7 @@ p {
 .teaching-services:hover, .dev-services:hover {
    background-color: rgba(1, 158, 158, 0.900);
    color: #fff;
-   transition: 600ms;
+   transition-duration: 600ms;
 }
 .service-icon {
    text-align: center;
@@ -142,22 +141,58 @@ p {
 
 
 /* Contacto */
-.contact .contact-form {
+.contact {
    background-color: #ff495c;
    color: #fff;
    padding: 20px;
    text-align: center;
 }
+
 .contact input {
-   padding: 12px;
+   display: inline-block;
+   height: calc(1.5em + .75rem + 2px);
+   padding: .375rem .75rem;
+   font-size: 1rem;
    font-size: 17px;
    font-weight: 500;
    border: 1px solid gray;
    border-radius: 5px;
+   margin-right: 0;
 }
-.rrss-icons a {
+.contact button {
+   display: inline-block;
+   height: calc(1.5em + .75rem + 2px);
+   padding: .375rem .75rem;
+   font-size: 17px;
+   background-color: #ce2334;
+   color: #fff;
+   border: 1px solid #fff;
+   border-radius: 5px;
+   margin-left: 0;
+}
+.contact button:hover {
+   background-color: rgba(1, 158, 158, 0.900);
+   transition-duration: 300ms;
+}
 
+.rrss-icons a {
+   text-align: center;
+   font-size: 40px;
 }
+.rrss-icons a:link {
+   color: #ce2334;
+ }
+ .rrss-icons a:visited {
+   color: black;
+}
+.rrss-icons a:hover {
+   color: rgba(1, 158, 158, 0.900);
+   transition-duration: 300ms;
+}
+.rrss-icons a:active {
+   color: #3e4543;
+}
+
 
 /* Pie de página */
 .footer {
