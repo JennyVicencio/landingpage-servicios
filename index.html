@@ -10,14 +10,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.9.55/css/materialdesignicons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/main.css">
-       <title>Aprende en línea</title>
+       <title>Mis servicios</title>
   </head>
     
   <body>
-
   <nav class="navbar">
     <div class="brand">
-      <img src="./assets/img/favicon.png" alt="logo" class="logo" style="height: 30px;">
+      <a onclick="gotop()" style="cursor: pointer;"><img src="./assets/img/logo.png" alt="logo" class="logo" style="height: 30px;"></a>
     </div>
     <div class="menu">
       <div class="menu-list">
@@ -31,7 +30,7 @@
     </div>
   </nav>
   
-  <header class="hero">
+  <header class="hero" id="top">
     <div class="hero-text">
       <h1>Servicios de docencia y desarrollo web</h1>
       <p>¡Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, hic quae enim rem repellat quis, beatae nihil voluptatum numquam quas consequatur eum quisquam dicta, eos maiores natus mollitia tempore aliquid?!</p>
@@ -42,16 +41,19 @@
   <main class="container">
     <section class="about" id="acerca">
       <h1>¿Quién soy?</h1>
-      <p>Profesora y desarrolladora web al mismo tiempo. Apasionada de la educación, el arte y la tecnología desde chica.</p>
-      <p>Ahora me encuentro ofreciendo mis servicios en aquellas cosas que me gustan y he tenido la oportunidad de desarrollar.</p>
+      <div class="about-text">
+        <p>Profesora y desarrolladora web al mismo tiempo. Apasionada de la educación, el arte y la tecnología desde chica.</p>
+        <p>Ahora me encuentro ofreciendo mis servicios en aquellas cosas que me gustan y he tenido la oportunidad de desarrollar.</p>
+      </div>
     </section>
     <hr style="width: 80%;">
+
     <section class="services" id="servicios">
       <h1>¿Qué puedo hacer por ti?</h1>
       <div class="service-row">
         <div class="teaching-services">
           <div class="service-icon">
-            <span class="mdi mdi-home"></span>
+            <span class="mdi mdi-school-outline"></span>
           </div>
           <div class="services-text">
             <h4>Enseñanza del inglés como lengua extranjera</h4>
@@ -72,9 +74,9 @@
   </main>
 
     <section class="contact" id="contacto">
-      <h3>¿Quiere solicitar alguno de mis servicios? Escríbame a mi correo.</h3>
+      <h3>¿Desea solicitar alguno de mis servicios? <br> Escríbame a mi correo.</h3>
       <div class="contact-form">
-        <button>Contactar</button>
+        <button id="contactbtn" type="button">Contactar</button>
         <h3>...O visite mis redes sociales</h3>
         <div class="rrss-icons">
           <a href="https://www.linkedin.com/in/jennyfer-v-758589170" target="_blank"><span class="mdi mdi-linkedin"></span></a>
@@ -84,9 +86,11 @@
       </div>
     </section>
 
+    <button onclick="gotop()" id="topbtn" type="button" title="Ir arriba"><span class="mdi mdi-arrow-expand-up"></span></button>
+
     <footer class="footer">
       <img src="./assets/img/favicon.png" alt="logo" class="logo" style="height: 60px;">
-      <p>Todos los derechos reservados © <span id="yearSpan"></span> Desarrollado por <strong>Jennyfer Vicencio</strong></p>
+      <p>Todos los derechos reservados<br>© <span id="yearSpan"></span> Desarrollado por <strong>Jennyfer Vicencio</strong></p>
     </footer>
 
       <!-- Optional JavaScript -->

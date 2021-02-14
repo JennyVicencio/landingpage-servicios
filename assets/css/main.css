@@ -3,7 +3,10 @@ body {
    margin: 0;
    font-family: 'Montserrat', sans-serif;
 }
-* {
+html {
+   scroll-behavior: smooth;
+}
+body * {
    box-sizing: border-box;
 }
 a {
@@ -26,6 +29,8 @@ p {
    font-weight: 500;
 }
 
+button { outline: none; }
+
 .logo {
    border-radius: 100px; 
 }
@@ -35,19 +40,19 @@ p {
    background: #fff;
    position: fixed;
    top: 0;
-   z-index: 1;
+   z-index: 4;
    width: 100%;
    display: flex;
    flex-flow: row wrap;
-   justify-content: space-between;
+   justify-content: space-around;
    align-items: center;
 }
-
 .brand, .menu {
    margin: 10px;
 }
 .menu .menu-list a {
    margin: 0px 10px;
+   flex-wrap: nowrap;
 }
 
 /* progress bar */
@@ -66,6 +71,7 @@ p {
  /* Cabecera */
  .hero {
     background: url('../img/hero.jpg') no-repeat;
+    background-attachment: fixed;
     background-size: cover;
     background-position: center;
     margin: 30px auto 0 auto;
@@ -79,7 +85,11 @@ p {
       border-top-right-radius: 15px;
       border-bottom-left-radius: 15px;
       padding: 20px 30px 50px 30px;
-      width: 60%;
+      position: relative;
+      z-index: 2;
+   }
+   .hero .hero-text h1 {
+      font-size: xx-large;
    }
    .hero a {
       color: #fff;
@@ -88,7 +98,6 @@ p {
       border-radius: 6px;
       font-size: 18px;
       font-weight: 700;
-      line-height: 25px;
    }
    .hero a:hover {
       background-color: #fa727f;
@@ -96,32 +105,44 @@ p {
    .hero a::selection {
       border: 2px solid #ff495c;
    }
+   .hero p {
+      line-height: 1.5em;
+      margin-bottom: 20px;
+   }
 
+/* main container de las secciones */
 .container {
    background: url('../img/Pattern-Randomized.svg') repeat;
+   background-position: center;
+   background-attachment: fixed;
    width: 100%;
 }
 
 /* Secciones */
 .about, .services {
-   width: 80%;
-   padding: 40px 50px;
+   width: 100%;
    margin: 0px auto;
 }
 .about h1, .services h1 {
    font-size: xx-large;
+   padding: 10px 40px;
+}
+
+.about-text {
+   width: 70%;
+   margin: 0px auto 50px auto;
 }
 
 /* Servicios */
 .service-row {
    display: flex;
-   flex-flow: row;
-   justify-items: flex-start;
+   flex-flow: row wrap;
+   justify-content: space-evenly;
 }
 .teaching-services, .dev-services {
    background-color: #fff;
-   padding: 20px 30px;
-   margin: auto 20px;
+   padding: 20px;
+   margin: 0px auto 50px auto;
    border-width: thin;
    border-radius: 4px;
    box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
@@ -133,12 +154,11 @@ p {
 }
 .service-icon {
    text-align: center;
-   font-size: 120px;
+   font-size: 10em;
 }
 .services-text p {
    font-size: small;
 }
-
 
 /* Contacto */
 .contact {
@@ -182,7 +202,7 @@ p {
 .rrss-icons a:link {
    color: #ce2334;
  }
- .rrss-icons a:visited {
+.rrss-icons a:visited {
    color: black;
 }
 .rrss-icons a:hover {
@@ -193,12 +213,114 @@ p {
    color: #3e4543;
 }
 
-
 /* Pie de página */
 .footer {
    background: #3e4543;
    color: white;
-   font-size: small;
+   font-size: 14px;
    text-align: center;
    padding: 20px;
 }
+
+/* botón ir arriba */
+#topbtn {
+   display: none;
+   position: fixed;
+   bottom: 20px;
+   right: 30px;
+   z-index: 50;
+   font-size: 18px;
+   border: none;
+   outline: none;
+   background-color: #ce2334;
+   color: #fff;
+   cursor: pointer;
+   padding: 15px;
+   border-radius: 4px;
+   opacity: 0.8;
+ }
+
+/* Media queries */
+
+/* Extra small devices */
+@media (max-width: 575px) {
+   .brand, .menu {
+      margin: 10px;
+      text-align: center;
+   }
+   .menu .menu-list a {
+      margin: 0px 8px;
+   }
+   .hero a {
+      font-size: 12px;
+   }
+   .hero .hero-text {
+      margin: auto auto;
+      width: 80%;
+      font-size: 80%;
+      transition-duration: 500ms;
+   }
+   .hero .hero-text h1 {
+      font-size: x-large;
+   }
+
+   .about, .services {
+      width: 90%;
+      font-size: 80%;
+   }
+   .about h1, .services h1 {
+      font-size: large;
+   }
+   .teaching-services, .dev-services {
+      width: 70%;
+      transition-duration: 500ms;
+   }
+   .service-icon {
+      font-size: 7em;
+   }
+
+   .footer {
+      font-size: 10px;
+   }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+   .hero .hero-text {
+      width: 70%;
+      transition-duration: 500ms;
+   }
+   .about h1, .services h1 {
+      font-size: x-large;
+   }
+   .teaching-services, .dev-services {
+      width: 60%;
+      transition-duration: 500ms;
+   }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+   .hero .hero-text {
+      width: 60%;
+      transition-duration: 500ms;
+   }
+   .about h1, .services h1 {
+     font-size: xx-large;
+   }
+   .teaching-services, .dev-services {
+      width: 45%;
+      transition-duration: 500ms;
+   }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+   .teaching-services, .dev-services {
+      width: 40%;
+      transition-duration: 500ms;
+   }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { }
