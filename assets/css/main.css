@@ -26,7 +26,7 @@ a:active {
 }
 
 p {
-   font-weight: 500;
+   font-weight: 300;
 }
 
 button { outline: none; }
@@ -64,7 +64,7 @@ button { outline: none; }
 }
  .progress-bar {
    height: 8px;
-   background: #ff495c;
+   background: linear-gradient(90deg, rgba(49, 49, 49, 0.800) 0%, rgba(255,73,73,0.900) 76%, rgba(255,73,92,1) 100%);
    width: 0%;
 }
  
@@ -74,7 +74,7 @@ button { outline: none; }
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-    margin: 30px auto 0 auto;
+    margin: 35px auto 0 auto;
     height: 100vh;
     padding-left: 20px;
     padding-top: 20vh;
@@ -84,7 +84,7 @@ button { outline: none; }
       color: #fff;
       border-top-right-radius: 15px;
       border-bottom-left-radius: 15px;
-      padding: 20px 30px 50px 30px;
+      padding: 20px 25px 50px 25px;
       position: relative;
       z-index: 2;
    }
@@ -125,7 +125,8 @@ button { outline: none; }
 }
 .about h1, .services h1 {
    font-size: xx-large;
-   padding: 10px 40px;
+   padding: 70px 40px 10px 40px;
+   margin-top: 0;
 }
 
 .about-text {
@@ -183,10 +184,11 @@ button { outline: none; }
    display: inline-block;
    height: calc(1.5em + .75rem + 2px);
    padding: .375rem .75rem;
+   font-weight: 500;
    font-size: 17px;
    background-color: #ce2334;
    color: #fff;
-   border: 1px solid #fff;
+   border: 2px solid #fff;
    border-radius: 5px;
    margin-left: 0;
 }
@@ -250,6 +252,9 @@ button { outline: none; }
    }
    .menu .menu-list a {
       margin: 0px 8px;
+   }
+   .hero {
+      padding-left: 0px;
    }
    .hero a {
       font-size: 12px;
